@@ -1,0 +1,184 @@
+/* --- Estilos Generales Reutilizados --- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0c2b3a;
+  padding: 10px 40px;
+  color: #ffffff;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --- Layout de la página Contact Us --- */
+.hero-section {
+  position: relative;
+  min-height: calc(100vh - 64px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('tu-imagen-de-nueva-york.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Barra lateral flotante */
+.social-sidebar {
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social-sidebar a {
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Contenedor Flexbox de dos columnas */
+.contact-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: 100px; /* Protege el espacio de la barra de redes sociales */
+  padding: 0 40px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Columna Izquierda (Texto) --- */
+.contact-info {
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.contact-title {
+  font-size: 56px;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  letter-spacing: 2px;
+}
+
+.contact-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* --- Columna Derecha (Formulario) --- */
+.contact-form-container {
+  width: 100%;
+  max-width: 450px; /* Limita el ancho del formulario como en la foto */
+}
+
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.08); /* Fondo semitransparente oscuro */
+  backdrop-filter: blur(4px); /* Suave efecto vidrio */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Entradas de texto y Textarea */
+.form-group input,
+.form-group textarea {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  padding: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ffffff;
+}
+
+/* Redimensionar textarea de forma vertical */
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Botón Submit Verde Azulado */
+.btn-submit {
+  width: 100%;
+  background-color: #0e8376;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 5px;
+}
+
+.btn-submit:hover {
+  background-color: #0b685e;
+}

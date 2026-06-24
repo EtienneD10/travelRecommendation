@@ -1,0 +1,205 @@
+/* Estilos generales y tipografía */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Contenedor principal de la barra de navegación */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0c2b3a; /* Azul oscuro del fondo */
+  padding: 10px 40px;
+  color: #ffffff;
+}
+
+/* Sección del Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* Enlaces de Navegación */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* Cápsula Blanca de Búsqueda */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 50px; /* Bordes completamente redondeados */
+  padding: 4px 6px 4px 20px;
+  width: 450px;
+}
+
+/* Campo de entrada de texto */
+.search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  color: #333333;
+}
+
+.search-input::placeholder {
+  color: #888888;
+}
+
+/* Icono de la lupa */
+.search-icon {
+  font-size: 16px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/* Estilo base para los botones internos */
+.btn {
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Botón Search (Verde azulado) */
+.btn-search {
+  background-color: #0e8376;
+  color: #ffffff;
+  margin-right: 5px;
+}
+
+.btn-search:hover {
+  background-color: #0b685e;
+}
+
+/* Botón Clear */
+.btn-clear {
+  background-color: #0e8376;
+  color: #ffffff;
+}
+
+.btn-clear:hover {
+  background-color: #0b685e;
+}
+
+
+/* Sección Principal (MAIN) */
+.hero-section {
+    position: relative;
+    min-height: calc(100vh - 64px); /* Ocupa el resto de la pantalla restando la altura del nav */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('tu-imagen-de-nueva-york.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    padding-left: 80px; /* Espacio para que el contenido no tape las redes sociales */
+    box-sizing: border-box;
+  }
+  
+  /* Barra lateral flotante de Redes Sociales */
+  .social-sidebar {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .social-sidebar a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  
+  .social-sidebar a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  /* Bloque contenedor del texto y botón */
+  .hero-content {
+    max-width: 550px; /* Limita el ancho del texto como en la imagen */
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Sombra ligera para mejorar lectura sobre el fondo */
+  }
+  
+  /* Título Principal */
+  .hero-title {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 25px 0;
+    letter-spacing: 1px;
+  }
+  
+  /* Párrafo Descriptivo */
+  .hero-description {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 30px 0;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Botón Book Now (Verde oscuro) */
+  .btn-book {
+    background-color: #064e3b; /* Tono verde oscuro */
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-book:hover {
+    background-color: #04392b;
+  }
+  
