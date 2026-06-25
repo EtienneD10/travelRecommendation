@@ -19,18 +19,18 @@
 
   <!-- Enlaces de Navegación Centrales -->
   <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
+    <li><a href="travel_recommendation.html">Home</a></li>
     <li><a href="aboutUs.html">About Us</a></li>
-    <li><a href="#contact">Contact Us</a></li>
+    <li><a href="contactUs.html">Contact Us</a></li>
   </ul>
 
   <!-- Contenedor de la Barra de Búsqueda -->
   <div class="search-container">
-    <input type="text" placeholder="Enter a destination or keyword" class="search-input">
+    <input type="text" id="search-input" placeholder="Enter a destination or keyword" class="search-input">
     <!-- Icono de lupa simulado -->
     <span class="search-icon">🔍</span>
-    <button class="btn btn-search">Search</button>
-    <button class="btn btn-clear">Clear</button>
+    <button id="btn-search" class="btn btn-search">Search</button>
+    <button id="btn-clear" class="btn btn-clear">Clear</button>
   </div>
 </nav>
 
@@ -59,8 +59,12 @@
   
       <button class="btn-book">Book Now</button>
     </div>
+    <div id="results-container" class="results-container">
+        <!-- Las tarjetas dinámicas de JavaScript se inyectarán aquí -->
+      </div>
   </main>
   
-    
+  <script src="travel_recommendation.js"></script>
+
 </body>
 </html>

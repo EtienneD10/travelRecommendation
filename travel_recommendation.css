@@ -203,3 +203,72 @@ body {
     background-color: #04392b;
   }
   
+  /* Contenedor dinámico de resultados */
+.results-container {
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  max-width: 800px;
+  z-index: 10;
+  color: #ffffff;
+}
+
+.results-title {
+  font-size: 28px;
+  color: #fca311; /* Color naranja/dorado para resaltar el título */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Envoltura de las tarjetas */
+.cards-wrapper {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Diseño de tarjeta individual */
+.result-card {
+  background-color: #ffffff;
+  color: #333333;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 320px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagen de la recomendación */
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Contenido de texto en la tarjeta */
+.card-body {
+  padding: 15px;
+  background-color: #ffffff;
+}
+
+.card-title {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  color: #0c2b3a;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+  color: #555555;
+}
+
+.no-results {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 8px;
+  display: inline-block;
+}
