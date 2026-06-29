@@ -33,13 +33,12 @@ function searchRecommendations() {
 
             let recommendations = [];
 
-            // Filtrar y normalizar palabras clave (singular, plural y variaciones en español/inglés si se desea)
+            // Filtrar y normalizar palabras clave
             if (keyword === 'beach' || keyword === 'beaches') {
                 recommendations = data.beaches;
             } else if (keyword === 'temple' || keyword === 'temples') {
                 recommendations = data.temples;
             } else if (keyword === 'country' || keyword === 'countries') {
-                // Si es un país, el JSON suele estructurarse con países que contienen ciudades internas
                 data.countries.forEach(country => {
                     recommendations = recommendations.concat(country.cities);
                 });
@@ -75,16 +74,14 @@ function searchRecommendations() {
  * Función encargada de renderizar las tarjetas HTML en el contenedor de resultados
  */
 function displayResults(places) {
-    // Título de la sección de resultados
-    const title = document.createElement('h2');
-    title.className = 'results-title';
-    title.innerText = 'Search Results';
-    resultsContainer.appendChild(title);
+    // Limpiamos el contenedor por seguridad antes de agregar elementos
+    resultsContainer.innerHTML = '';
 
-    // Contenedor interno tipo Grid/Flex para las tarjetas
+    // Se crea la envoltura de las tarjetas con la clase asignada a la cuadrícula CSS
     const cardsWrapper = document.createElement('div');
     cardsWrapper.className = 'cards-wrapper';
 
+    // Generamos cada una de las tarjetas usando las propiedades correctas de tu JSON (imageUrl)
     places.forEach(place => {
         const card = document.createElement('div');
         card.className = 'result-card';
@@ -99,6 +96,7 @@ function displayResults(places) {
         cardsWrapper.appendChild(card);
     });
 
+    // Añadimos la envoltura directamente al contenedor dinámico
     resultsContainer.appendChild(cardsWrapper);
 }
 

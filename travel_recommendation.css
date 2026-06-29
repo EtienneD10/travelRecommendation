@@ -204,46 +204,51 @@ body {
   }
   
   /* Contenedor dinámico de resultados */
-.results-container {
-  position: absolute;
-  top: 120px;
-  left: 100px;
-  max-width: 800px;
-  z-index: 10;
-  color: #ffffff;
+  .results-container {
+    width: 100%;
+    max-width: 1200px; /* Ancho amplio para que quepan 3 columnas */
+    margin: 40px auto; /* Centra el bloque en la pantalla */
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente como la muestra */
+    border-radius: 15px;
 }
 
 .results-title {
-  font-size: 28px;
-  color: #fca311; /* Color naranja/dorado para resaltar el título */
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 28px;
+    color: #ffffff; /* Blanco para mantener consistencia */
+    margin-bottom: 25px;
+    text-align: left;
+    font-weight: bold;
 }
 
 /* Envoltura de las tarjetas */
 .cards-wrapper {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales como el resultado deseado */
+    gap: 25px; /* Espacio uniforme entre tarjetas */
+    width: 100%;
 }
 
 /* Diseño de tarjeta individual */
 .result-card {
-  background-color: #ffffff;
-  color: #333333;
-  border-radius: 12px;
-  overflow: hidden;
-  width: 320px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
+    background-color: #ffffff;
+    color: #333333;
+    border-radius: 15px; /* Bordes redondeados suaves */
+    overflow: hidden; /* Obliga a la imagen a respetar las esquinas redondeadas */
+    width: 100%; /* Ocupa el ancho total de su celda en la cuadrícula */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
 }
 
 /* Imagen de la recomendación */
 .card-image {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+    width: 100%;
+    height: 200px; /* Altura regulada para proporciones correctas */
+    object-fit: cover;
+    display: block;
 }
 
 /* Contenido de texto en la tarjeta */
